@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-ak-deployment
+  name: my-demo-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: angular-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-angular-app
-        image: akdevopscoaching/springbootapp:latest
+        image: tousif1504/demo-image:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
